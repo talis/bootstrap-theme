@@ -39,9 +39,6 @@ jobs:
   start_build:
     type: no-op
 
-  complete_build:
-    type: no-op
-
   lint_and_test:
     <<: *executor_node
     steps:
@@ -111,7 +108,3 @@ workflows:
             branches:
               only:
                 - main
-      - complete_build:
-          requires:
-            - lint_and_test
-            - publish_release
