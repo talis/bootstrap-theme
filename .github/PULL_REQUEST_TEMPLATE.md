@@ -1,6 +1,6 @@
 #### Problem
 
-- https://techfromsage.atlassian.net/browse/TA-###
+- https://aspire.jira.com/browse/TA-###
 
 * What is happening for the user?
 * What is happening technically?

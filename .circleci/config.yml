@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@7.1.1
+  node: circleci/node@7.2.1
 
 executor_node: &executor_node
   executor:
@@ -34,21 +34,6 @@ commands:
           paths:
             - node_modules
           key: << pipeline.parameters.node_modules_cache_key >>
-
-  save_cache_build:
-    steps:
-      - save_cache:
-          name: Save build folder to cache
-          key: build--{{ .Revision }}
-          paths:
-            - build
-
-  restore_cache_build:
-    steps:
-      - restore_cache:
-          name: Restore build folder from cache
-          keys:
-            - build--{{ .Revision }}
 
 jobs:
   start_build:
