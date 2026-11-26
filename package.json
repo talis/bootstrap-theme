@@ -53,8 +53,8 @@
     "npm-run-all2": "8.0.4",
     "prettier": "3.6.2",
     "sass": "1.91.0",
-    "semantic-release": "24.2.7",
-    "serve": "14.2.4",
+    "semantic-release": "25.0.9",
+    "serve": "14.2.8",
     "stylelint": "16.23.1",
     "stylelint-config-standard": "36.0.1"
   },
