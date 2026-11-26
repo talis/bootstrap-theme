@@ -40,11 +40,7 @@ jobs:
     type: no-op
 
   complete_build:
-    <<: *executor_node
-    steps:
-      - run:
-          name: "Complete build"
-          command: echo "Build completed successfully"
+    type: no-op
 
   lint_and_test:
     <<: *executor_node
