@@ -77,7 +77,7 @@ jobs:
       - run:
           name: Configure dependencies
           command: |
-            git config user.email "talisaspire@technologyfromsage.com"
+            git config user.email "shared.aspire@talis.com"
             git config user.name "talisaspire"
       - run:
           name: Deploy docs to github pages
