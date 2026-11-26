@@ -2,7 +2,7 @@
   "name": "@talisdev/bootstrap-theme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techfromsage/bootstrap-theme.git"
+    "url": "git+https://github.com/talis/bootstrap-theme.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -16,9 +16,9 @@
     "scss"
   ],
   "bugs": {
-    "url": "https://github.com/techfromsage/bootstrap-theme/issues"
+    "url": "https://github.com/talis/bootstrap-theme/issues"
   },
-  "homepage": "https://github.com/techfromsage/bootstrap-theme#readme",
+  "homepage": "https://github.com/talis/bootstrap-theme#readme",
   "scripts": {
     "build": "npm-run-all build:*",
     "build:assets": "mkdir -p docs/assets && cp -r assets/* docs/assets/",

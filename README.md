@@ -88,7 +88,7 @@ $enable-shadows: false;
 1. Clone this repository:
 
    ```bash
-   git clone git@github.com:techfromsage/bootstrap-theme.git
+   git clone git@github.com:talis/bootstrap-theme.git
    ```
 
 1. Change into the repository directory:

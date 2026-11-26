@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@7.1.1
+  node: circleci/node@7.2.1
 
 executor_node: &executor_node
   executor:
@@ -35,31 +35,9 @@ commands:
             - node_modules
           key: << pipeline.parameters.node_modules_cache_key >>
 
-  save_cache_build:
-    steps:
-      - save_cache:
-          name: Save build folder to cache
-          key: build--{{ .Revision }}
-          paths:
-            - build
-
-  restore_cache_build:
-    steps:
-      - restore_cache:
-          name: Restore build folder from cache
-          keys:
-            - build--{{ .Revision }}
-
 jobs:
   start_build:
     type: no-op
-
-  complete_build:
-    <<: *executor_node
-    steps:
-      - run:
-          name: "Complete build"
-          command: echo "Build completed successfully"
 
   lint_and_test:
     <<: *executor_node
@@ -99,7 +77,7 @@ jobs:
       - run:
           name: Configure dependencies
           command: |
-            git config user.email "talisaspire@technologyfromsage.com"
+            git config user.email "shared.aspire@talis.com"
             git config user.name "talisaspire"
       - run:
           name: Deploy docs to github pages
@@ -118,7 +96,7 @@ workflows:
             branches:
               ignore:
                 - main
-                - /^renovate\/.*/
+                - /^dependabot\/.*/
       - lint_and_test:
           requires:
             - start_build
@@ -130,7 +108,3 @@ workflows:
             branches:
               only:
                 - main
-      - complete_build:
-          requires:
-            - lint_and_test
-            - publish_release
