@@ -96,7 +96,7 @@ workflows:
             branches:
               ignore:
                 - main
-                - /^renovate\/.*/
+                - /^dependabot\/.*/
       - lint_and_test:
           requires:
             - start_build
